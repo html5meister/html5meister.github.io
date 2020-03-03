@@ -22,7 +22,11 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/58489441" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script>
-	alert("Что бы увидеть подробную информацию о картине, просто навидите курсор или нажмите на неё!")
+	alert("Что бы увидеть подробную информацию о картине, просто навидите курсор или нажмите на неё!");
+	Notification.requestPermission(function(permission){
+	// переменная permission содержит результат запроса
+	console.log('Результат запроса прав:', permission);
+	});
 </script>
 </head>
 <body>
@@ -68,5 +72,11 @@
 <p>Галерея Школы №25 г.Орла</p>
 </div>
 </footer>
+<script>
+	sendNotification('Другой сайт от меня:', {
+	body: 'kreepmeister.github.io',
+	dir: 'auto'
+});
+</script>
 </body>
 </html>
