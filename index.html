@@ -6,6 +6,7 @@
 <title>Школьная галерея</title>
 <link href="styles.css" rel="stylesheet">
 <link rel="icon" href="images/shool_25.png">
+<script src="dop/jquery.js"></script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -30,6 +31,14 @@
 	sendNotification('Другой сайт от меня:', {
 	body: 'kreepmeister.github.io',
 	dir: 'auto'
+	});
+	
+	var sendLikeRequest = function(id) {
+	// Send request to server
+	};
+	$(document).on('click', '.like', function(e) {
+	    e.preventDefault();
+	    sendLikeRequest($(this).data('id'));
 	});
 </script>
 </head>
